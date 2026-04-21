@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unikalne, ręcznie robione wyroby szydełkowe — maskotki, ubrania, torby i akcesoria. Zamów spersonalizowany produkt dopasowany do Twoich potrzeb.">
+  <title>Zaplątani — Rękodzieło Artystyczne</title>
+  <link rel="stylesheet" href="prototyp/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧶</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo" id="logo-home">
+        <div class="logo-icon">🧶</div>
+        <span class="logo-text">Zaplątani</span>
+      </a>
+
+      <div class="navbar-nav" id="nav-links">
+        <a href="#home" id="nav-home">Strona główna</a>
+        <a href="#categories" id="nav-categories">Kategorie</a>
+        <a href="#products" id="nav-products">Produkty</a>
+        <a href="#custom" id="nav-custom">Zamówienia custom</a>
+        <a href="#contact" id="nav-contact">Kontakt</a>
+      </div>
+
+      <div class="navbar-actions">
+        <button class="icon-btn" id="btn-search" title="Szukaj">🔍</button>
+        <button class="icon-btn" id="btn-cart" title="Koszyk">
+          🛒
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="btn-login" id="btn-open-auth">Zaloguj się</button>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="prototyp/images/hero_banner.png" alt="Rękodzieło szydełkowe — maskotki i akcesoria">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-badge">✨ Handmade z pasją</span>
+        <h1>Unikalne wyroby<br><span class="highlight">szydełkowe</span></h1>
+        <p>Każdy produkt tworzony jest ręcznie, z miłością i dbałością o każdy detal. Odkryj naszą kolekcję lub zamów coś specjalnie dla siebie.</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary" id="hero-cta-shop">Odkryj kolekcję ✦</a>
+          <a href="#custom" class="btn btn-outline" id="hero-cta-custom">Zamów custom →</a>
+        </div>
+      </div>
+      <div class="hero-decor yarn-1"></div>
+      <div class="hero-decor yarn-2"></div>
+    </section>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Odkryj nasze <span class="accent-text">kategorie</span></h2>
+        <p class="section-subtitle animate-on-scroll">Przeglądaj naszą bogatą ofertę ręcznie robionych produktów w pięciu wyjątkowych kategoriach</p>
+
+        <div class="categories-grid">
+          <div class="category-card animate-on-scroll" data-category="maskotki" id="cat-maskotki">
+            <div class="category-icon">🧸</div>
+            <h3>Maskotki</h3>
+            <p>Urocze amigurumi</p>
+          </div>
+          <div class="category-card animate-on-scroll" data-category="koszulki" id="cat-koszulki">
+            <div class="category-icon">👕</div>
+            <h3>Koszulki / Topy</h3>
+            <p>Modne i unikalne</p>
+          </div>
+          <div class="category-card animate-on-scroll" data-category="szaliki" id="cat-szaliki">
+            <div class="category-icon">🧣</div>
+            <h3>Szaliki</h3>
+            <p>Ciepłe i stylowe</p>
+          </div>
+          <div class="category-card animate-on-scroll" data-category="czapki" id="cat-czapki">
+            <div class="category-icon">🧢</div>
+            <h3>Czapki</h3>
+            <p>Na każdą porę roku</p>
+          </div>
+          <div class="category-card animate-on-scroll" data-category="torby" id="cat-torby">
+            <div class="category-icon">👜</div>
+            <h3>Torby</h3>
+            <p>Boho i klasyczne</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Nasza <span class="accent-text">kolekcja</span></h2>
+        <p class="section-subtitle animate-on-scroll">Każdy produkt jest jedyny w swoim rodzaju — tworzony ręcznie z najwyższej jakości włóczek</p>
+
+        <div class="products-filter" id="products-filter">
+          <button class="filter-btn active" data-filter="all" id="filter-all">Wszystkie</button>
+          <button class="filter-btn" data-filter="maskotki" id="filter-maskotki">Maskotki</button>
+          <button class="filter-btn" data-filter="koszulki" id="filter-koszulki">Koszulki / Topy</button>
+          <button class="filter-btn" data-filter="szaliki" id="filter-szaliki">Szaliki</button>
+          <button class="filter-btn" data-filter="czapki" id="filter-czapki">Czapki</button>
+          <button class="filter-btn" data-filter="torby" id="filter-torby">Torby</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <!-- Products are injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Jak to <span class="accent-text">działa?</span></h2>
+        <p class="section-subtitle animate-on-scroll">Zamów swój wymarzony produkt w czterech prostych krokach</p>
+
+        <div class="steps-container">
+          <div class="step-card animate-on-scroll">
+            <div class="step-number">1</div>
+            <div class="step-icon">🎨</div>
+            <h3>Wybierz lub zaprojektuj</h3>
+            <p>Wybierz produkt z katalogu lub złóż zamówienie custom z własnymi wytycznymi</p>
+          </div>
+          <div class="step-card animate-on-scroll">
+            <div class="step-number">2</div>
+            <div class="step-icon">💳</div>
+            <h3>Dokonaj płatności</h3>
+            <p>Zapłać wygodnie — BLIK, karta, szybki przelew. Zamówienia custom po przedpłacie</p>
+          </div>
+          <div class="step-card animate-on-scroll">
+            <div class="step-number">3</div>
+            <div class="step-icon">🧶</div>
+            <h3>Realizacja zamówienia</h3>
+            <p>Tworzę Twój produkt z najwyższą starannością. Śledź status na bieżąco</p>
+          </div>
+          <div class="step-card animate-on-scroll">
+            <div class="step-number">4</div>
+            <div class="step-icon">📦</div>
+            <h3>Wysyłka i odbiór</h3>
+            <p>Kurier pod drzwi albo paczkomat — Ty wybierasz! Numer śledzenia w mailu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CUSTOM ORDER SECTION ===== -->
+    <section class="custom-order" id="custom">
+      <div class="container">
+        <div class="custom-grid">
+          <div class="custom-info animate-on-scroll">
+            <h2>Zamów coś <span class="accent-text">wyjątkowego</span></h2>
+            <p>Marzysz o unikalnym szydełkowym produkcie? Opowiedz mi o swoim pomyśle, a ja go zrealizuję! Każde zamówienie custom jest tworzone specjalnie dla Ciebie.</p>
+
+            <div class="custom-features">
+              <div class="custom-feature">
+                <div class="feature-icon">📐</div>
+                <div>
+                  <h4>Wybierz rozmiar</h4>
+                  <p>S, M, L lub podaj wymiary w cm</p>
+                </div>
+              </div>
+              <div class="custom-feature">
+                <div class="feature-icon">🎨</div>
+                <div>
+                  <h4>Wybierz kolory</h4>
+                  <p>Szeroka paleta kolorów włóczek</p>
+                </div>
+              </div>
+              <div class="custom-feature">
+                <div class="feature-icon">💌</div>
+                <div>
+                  <h4>Dodaj wytyczne</h4>
+                  <p>Opisz swój pomysł — zrealizuję go!</p>
+                </div>
+              </div>
+              <div class="custom-feature">
+                <div class="feature-icon">📊</div>
+                <div>
+                  <h4>Śledź realizację</h4>
+                  <p>Aktualizacje statusu w czasie rzeczywistym</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-form animate-on-scroll" id="custom-form-section">
+            <h3>📝 Formularz zamówienia custom</h3>
+            <form id="custom-order-form">
+              <div class="form-group">
+                <label for="custom-product-type">Typ produktu</label>
+                <select id="custom-product-type" required>
+                  <option value="">— Wybierz kategorię —</option>
+                  <option value="maskotka">Maskotka</option>
+                  <option value="koszulka">Koszulka / Top</option>
+                  <option value="szalik">Szalik</option>
+                  <option value="czapka">Czapka</option>
+                  <option value="torba">Torba</option>
+                  <option value="inne">Inne</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="custom-size">Rozmiar</label>
+                  <select id="custom-size">
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                    <option value="custom">Wymiary w cm</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="custom-color">Preferowany kolor</label>
+                  <input type="text" id="custom-color" placeholder="np. pastelowy róż">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="custom-message">Twoje wytyczne</label>
+                <textarea id="custom-message" rows="4" placeholder="Opisz swój wymarzony produkt..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btn-submit-custom" style="width:100%;justify-content:center;">Wyślij zapytanie ✨</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter" id="newsletter">
+      <div class="container">
+        <div class="newsletter-inner animate-on-scroll">
+          <div class="newsletter-icon">💌</div>
+          <h2 class="section-title">Bądź na bieżąco!</h2>
+          <p class="section-subtitle">Zapisz się do newslettera i otrzymuj informacje o nowościach, promocjach oraz ekskluzywne kody zniżkowe</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Twój adres e-mail" required>
+            <button type="submit" id="btn-newsletter-submit">Zapisz się 💌</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Co mówią <span class="accent-text">klienci</span></h2>
+        <p class="section-subtitle animate-on-scroll">Opinie naszych zadowolonych klientów mówią za siebie</p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Zamówiłam maskotkę na prezent dla córki i jestem zachwycona! Wykonanie jest perfekcyjne, a kontakt z właścicielką bardzo miły.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AK</div>
+              <div>
+                <div class="testimonial-name">Anna Kowalska</div>
+                <div class="testimonial-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Top szydełkowy to hit sezonu! Dokładnie taki, jak chciałam. Zamówienie custom to świetna opcja — mogłam wybrać kolory i rozmiar.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MN</div>
+              <div>
+                <div class="testimonial-name">Martyna Nowak</div>
+                <div class="testimonial-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Szalik idealny na jesień! Cieplutki i niesamowicie miękki. Widać, że to ręczna robota z sercem. Na pewno wrócę po więcej!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">KW</div>
+              <div>
+                <div class="testimonial-name">Kasia Wiśniewska</div>
+                <div class="testimonial-stars">★★★★☆</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT & FAQ ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Masz <span class="accent-text">pytania?</span></h2>
+        <p class="section-subtitle animate-on-scroll">Skontaktuj się z nami lub sprawdź najczęściej zadawane pytania</p>
+
+        <div class="contact-grid">
+          <div class="contact-form-card animate-on-scroll">
+            <h3>📬 Napisz do nas</h3>
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Imię i nazwisko</label>
+                <input type="text" id="contact-name" placeholder="Jan Kowalski" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">E-mail</label>
+                <input type="email" id="contact-email" placeholder="jan@email.pl" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Temat</label>
+                <input type="text" id="contact-subject" placeholder="Pytanie o produkt..." required>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Wiadomość</label>
+                <textarea id="contact-message" rows="4" placeholder="Twoja wiadomość..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btn-submit-contact" style="width:100%;justify-content:center;">Wyślij wiadomość ✉️</button>
+            </form>
+          </div>
+
+          <div class="faq-section animate-on-scroll">
+            <h3>❓ Często zadawane pytania</h3>
+
+            <div class="faq-item" id="faq-1">
+              <button class="faq-question" id="faq-btn-1">
+                Jak długo trwa realizacja zamówienia?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Standardowe produkty wysyłamy w ciągu 3-5 dni roboczych. Zamówienia custom mogą zająć od 7 do 14 dni w zależności od złożoności projektu.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" id="faq-2">
+              <button class="faq-question" id="faq-btn-2">
+                Czy mogę zwrócić zamówienie?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Tak! Produkty standardowe możesz zwrócić w ciągu 14 dni od otrzymania. Zamówienia custom nie podlegają zwrotowi, ale przyjmujemy reklamacje.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" id="faq-3">
+              <button class="faq-question" id="faq-btn-3">
+                Jakie metody płatności akceptujecie?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Akceptujemy BLIK, karty płatnicze (Visa, Mastercard), szybkie przelewy bankowe oraz płatności online przez PayU.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" id="faq-4">
+              <button class="faq-question" id="faq-btn-4">
+                Jak działa system zniżek?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Po przekroczeniu kwoty 200 zł w jednym zamówieniu, automatycznie otrzymujesz kod rabatowy -10% na następne zakupy! Kody przesyłamy na e-mail.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" id="faq-5">
+              <button class="faq-question" id="faq-btn-5">
+                Jak mogę śledzić przesyłkę?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Po nadaniu paczki otrzymasz e-mail z numerem przewozowym i linkiem do śledzenia przesyłki. Dostarczamy kurierem lub do paczkomatów InPost.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">Zaplątani</div>
+          <p>Ręcznie robione wyroby szydełkowe tworzone z pasją. Każdy produkt jest unikalny i stworzony z dbałością o najdrobniejsze detale.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" title="Instagram" id="social-instagram">📸</a>
+            <a href="#" class="social-link" title="Facebook" id="social-facebook">📘</a>
+            <a href="#" class="social-link" title="Pinterest" id="social-pinterest">📌</a>
+            <a href="#" class="social-link" title="TikTok" id="social-tiktok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sklep</h4>
+          <ul>
+            <li><a href="#categories">Kategorie</a></li>
+            <li><a href="#products">Produkty</a></li>
+            <li><a href="#custom">Zamówienia custom</a></li>
+            <li><a href="#">Nowości</a></li>
+            <li><a href="#">Promocje</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pomoc</h4>
+          <ul>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#faq-2">Zwroty i reklamacje</a></li>
+            <li><a href="#faq-1">Czas realizacji</a></li>
+            <li><a href="#faq-3">Płatności</a></li>
+            <li><a href="#faq-5">Wysyłka</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Płatności</h4>
+          <p style="font-size:0.88rem;margin-bottom: 0.5rem;">Bezpieczne płatności online:</p>
+          <div class="footer-payment">
+            <span class="payment-icon">BLIK</span>
+            <span class="payment-icon">VISA</span>
+            <span class="payment-icon">MC</span>
+            <span class="payment-icon">PayU</span>
+          </div>
+          <h4 style="margin-top:1.5rem;">Wysyłka</h4>
+          <div class="footer-payment">
+            <span class="payment-icon">📦 InPost</span>
+            <span class="payment-icon">🚚 Kurier</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zaplątani. Wszelkie prawa zastrzeżone.</p>
+        <div class="footer-bottom-links">
+          <a href="#" id="link-privacy">Polityka prywatności</a>
+          <a href="#" id="link-terms">Regulamin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== AUTH MODAL ===== -->
+  <div class="modal-overlay" id="auth-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="auth-modal-title">Twoje konto</h3>
+        <button class="modal-close" id="auth-modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login" id="tab-login">Logowanie</button>
+          <button class="auth-tab" data-tab="register" id="tab-register">Rejestracja</button>
+        </div>
+
+        <!-- Login Form -->
+        <form class="auth-form active" id="login-form" data-form="login">
+          <div class="form-group">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" placeholder="twoj@email.pl" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Hasło</label>
+            <input type="password" id="login-password" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-login-submit">Zaloguj się</button>
+          <p class="modal-footer-text">
+            Nie masz konta? <a href="#" id="link-go-register">Zarejestruj się</a>
+          </p>
+        </form>
+
+        <!-- Register Form -->
+        <form class="auth-form" id="register-form" data-form="register">
+          <div class="form-group">
+            <label for="reg-name">Imię i nazwisko</label>
+            <input type="text" id="reg-name" placeholder="Jan Kowalski" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">E-mail</label>
+            <input type="email" id="reg-email" placeholder="twoj@email.pl" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Hasło</label>
+            <input type="password" id="reg-password" placeholder="Min. 6 znaków" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-password-confirm">Potwierdź hasło</label>
+            <input type="password" id="reg-password-confirm" placeholder="Powtórz hasło" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-register-submit">Zarejestruj się</button>
+          <p class="modal-footer-text">
+            Masz już konto? <a href="#" id="link-go-login">Zaloguj się</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-sidebar-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>🛒 Koszyk (<span id="cart-sidebar-count">0</span>)</h3>
+      <button class="modal-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Twój koszyk jest pusty</p>
+        <p style="font-size:0.82rem;color:var(--clr-text-muted);margin-top:0.5rem;">Dodaj produkty, aby kontynuować zakupy</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none;">
+      <div class="cart-discount-input">
+        <input type="text" placeholder="Kod rabatowy" id="discount-code-input">
+        <button id="btn-apply-discount">Zastosuj</button>
+      </div>
+      <div class="cart-total">
+        <span>Suma:</span>
+        <span class="cart-total-amount" id="cart-total-amount">0,00 zł</span>
+      </div>
+      <button class="btn btn-primary" id="btn-checkout" style="width:100%;justify-content:center;">
+        Przejdź do płatności 💳
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ===== ADMIN PANEL (hidden, toggled) ===== -->
+  <div class="admin-panel" id="admin-panel">
+    <div class="container">
+      <div class="admin-header">
+        <div>
+          <h2 style="font-family:var(--font-heading);font-size:1.8rem;">Panel Administracyjny</h2>
+          <p style="color:var(--clr-text-light);">Witaj, Właścicielko! 👋</p>
+        </div>
+        <button class="btn btn-dark" id="btn-close-admin">← Powrót do sklepu</button>
+      </div>
+
+      <div class="admin-stats">
+        <div class="admin-stat-card">
+          <div class="stat-icon" style="background:var(--clr-primary-light);">📦</div>
+          <div class="stat-value">47</div>
+          <div class="stat-label">Zamówień w tym miesiącu</div>
+          <div class="stat-change positive">↑ +12% vs poprz. mies.</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-icon" style="background:#D4F5D4;">💰</div>
+          <div class="stat-value">8 450 zł</div>
+          <div class="stat-label">Przychód miesięczny</div>
+          <div class="stat-change positive">↑ +8% vs poprz. mies.</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-icon" style="background:#D4E8FF;">👥</div>
+          <div class="stat-value">312</div>
+          <div class="stat-label">Subskrybentów newslettera</div>
+          <div class="stat-change positive">↑ +23 nowych</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-icon" style="background:#FFF3D4;">⭐</div>
+          <div class="stat-value">4.9</div>
+          <div class="stat-label">Średnia ocena</div>
+          <div class="stat-change positive">Na podstawie 89 opinii</div>
+        </div>
+      </div>
+
+      <div class="admin-table-card">
+        <div class="admin-table-header">
+          <h3>Ostatnie zamówienia</h3>
+          <button class="btn btn-primary" style="padding:0.5rem 1rem;font-size:0.85rem;" id="btn-add-product">+ Dodaj produkt</button>
+        </div>
+        <table class="admin-table" id="admin-orders-table">
+          <thead>
+            <tr>
+              <th>Nr zamówienia</th>
+              <th>Klient</th>
+              <th>Produkt</th>
+              <th>Kwota</th>
+              <th>Status</th>
+              <th>Akcja</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#ZK-2026-047</td>
+              <td>Anna Kowalska</td>
+              <td>Miś Amigurumi (custom)</td>
+              <td>149,00 zł</td>
+              <td><span class="status-badge status-production">W produkcji</span></td>
+              <td><button class="btn btn-primary" style="padding:0.3rem 0.8rem;font-size:0.78rem;" onclick="updateOrderStatus(this)">Zmień status</button></td>
+            </tr>
+            <tr>
+              <td>#ZK-2026-046</td>
+              <td>Martyna Nowak</td>
+              <td>Top Boho (M, beżowy)</td>
+              <td>189,00 zł</td>
+              <td><span class="status-badge status-shipped">Wysłane</span></td>
+              <td><button class="btn btn-primary" style="padding:0.3rem 0.8rem;font-size:0.78rem;" onclick="updateOrderStatus(this)">Zmień status</button></td>
+            </tr>
+            <tr>
+              <td>#ZK-2026-045</td>
+              <td>Kasia Wiśniewska</td>
+              <td>Szalik Jesienny</td>
+              <td>89,00 zł</td>
+              <td><span class="status-badge status-shipped">Wysłane</span></td>
+              <td><button class="btn btn-primary" style="padding:0.3rem 0.8rem;font-size:0.78rem;" onclick="updateOrderStatus(this)">Zmień status</button></td>
+            </tr>
+            <tr>
+              <td>#ZK-2026-044</td>
+              <td>Ola Zielińska</td>
+              <td>Czapka Zimowa (custom)</td>
+              <td>79,00 zł</td>
+              <td><span class="status-badge status-pending">Oczekuje</span></td>
+              <td><button class="btn btn-primary" style="padding:0.3rem 0.8rem;font-size:0.78rem;" onclick="updateOrderStatus(this)">Zmień status</button></td>
+            </tr>
+            <tr>
+              <td>#ZK-2026-043</td>
+              <td>Paulina Majewska</td>
+              <td>Torba Boho Sage</td>
+              <td>159,00 zł</td>
+              <td><span class="status-badge status-cancelled">Anulowane</span></td>
+              <td><button class="btn btn-primary" style="padding:0.3rem 0.8rem;font-size:0.78rem;" onclick="updateOrderStatus(this)">Zmień status</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="prototyp/app.js"></script>
+</body>
+</html>

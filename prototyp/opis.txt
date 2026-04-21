@@ -1,0 +1,41 @@
+Opis zadania
+Właścicielka pracowni rękodzieła artystycznego planuje wdrożenie systemu informatycznego do
+zarządzania sprzedażą unikalnych wyrobów szydełkowych. Głównym celem platformy jest umożliwienie klientom zakupu produktów standardowych oraz składania zamówień spersonalizowanych
+(customowych).
+Funkcjonalności dla użytkownika niezalogowanego
+Klient ma możliwość przeglądania katalogu produktów podzielonego na kategorie:
+maskotki, koszulki/topy, szaliki, czapki oraz torby. System pozwala na sprawdzenie cen produktów oraz dostępnych wariantów przed podjęciem decyzji o zakupie. Użytkownik może zapisać się
+do newslettera, aby otrzymywać informacje o nowościach i kodach zniżkowych. Dostępne jest
+okno obsługi klienta (moduł kontaktu), umożliwiające zadawanie pytań przed zakupem.
+Funkcjonalności dla użytkownika zalogowanego
+Po zarejestrowaniu i zalogowaniu się do serwisu, klient uzyskuje możliwość dokonywania
+zakupów. Personalizacja produktu: Przy składaniu zamówienia klient wybiera rozmiar (np. S, M, L
+lub wymiary w cm), wariant kolorystyczny oraz może dodać własne wytyczne w polu wiadomości.
+Zarządzanie zamówieniami: Klient może śledzić status realizacji zamówienia oraz przeglądać
+historię swoich zakupów. System zniżkowy: Po przekroczeniu określonego progu kwotowego
+zamówienia, system automatycznie generuje kod rabatowy dla klienta. Anulowanie zakupu:
+Możliwość anulowania transakcji na każdym etapie przed rozpoczęciem produkcji. Zwroty
+i reklamacje: Prawo do zwrotu towaru standardowego w ciągu 14 dni oraz możliwość zgłoszenia
+reklamacji w przypadku wad produktu lub niezgodności z zamówieniem customowym.
+Metody płatności i wysyłki
+System obsługuje płatności elektroniczne, w tym szybkie przelewy, karty płatnicze oraz kod
+BLIK. Zamówienia customowe są przekazywane do realizacji po potwierdzeniu dokonania przedpłaty.
+Klient ma do wyboru dostawę kurierską pod wskazany adres lub odbiór w automatycznych
+punktach odbioru (paczkomaty). Po nadaniu paczki system generuje numer przewozowy i wysyła
+link do śledzenia przesyłki.
+Panel Administracyjny i role systemowe
+Administrator (Właścicielka):
+• Odpowiada za zarządzanie asortymentem: dodawanie, edytowanie oraz usuwanie wzorów
+i produktów z oferty.
+• Weryfikuje zamówienia customowe, akceptuje projekty lub kontaktuje się z klientem w
+celu doprecyzowania szczegółów.
+• Aktualizuje statusy zamówień (np. „w produkcji”, „wysłane”).
+Moduł statystyk:
+• System generuje raporty sprzedażowe z podziałem na poszczególne źródła przychodu.
+• Administrator ma dostęp do danych o najpopularniejszych kategoriach, sumie przychodów
+(miesięcznych i rocznych) oraz liczbie subskrybentów newslettera.
+Proces realizacji zamówienia
+1. Klient konfiguruje produkt, dodaje go do koszyka i dokonuje płatności.
+2. Zamówienie trafia do weryfikacji przez Administratora.
+3. Po wykonaniu przedmiotu status zmienia się na „wysłane”, a system wysyła automatyczne
+powiadomienie e-mail do klienta.
