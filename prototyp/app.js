@@ -2,49 +2,49 @@
 const PRODUCTS = [
   {
     id: 1, name: 'Miś Przytulanka', category: 'maskotki', price: 129,
-    image: 'images/mascot_bear.png', badge: 'new', badgeText: 'Nowość',
+    image: 'prototyp/images/mascot_bear.png', badge: 'new', badgeText: 'Nowość',
     colors: ['#F5C6C6', '#D4A0A0', '#C4A882'],
     description: 'Uroczy miś amigurumi, idealny na prezent.'
   },
   {
     id: 2, name: 'Króliczek Lawendowy', category: 'maskotki', price: 119, oldPrice: 139,
-    image: 'images/mascot_bunny.png', badge: 'sale', badgeText: '-15%',
+    image: 'prototyp/images/mascot_bunny.png', badge: 'sale', badgeText: '-15%',
     colors: ['#C8B8E0', '#F0D4D4', '#FFFFFF'],
     description: 'Delikatny króliczek w pastelowych kolorach.'
   },
   {
     id: 3, name: 'Lisek Amigurumi', category: 'maskotki', price: 139,
-    image: 'images/mascot_fox.png', badge: 'custom', badgeText: 'Custom',
+    image: 'prototyp/images/mascot_fox.png', badge: 'custom', badgeText: 'Custom',
     colors: ['#E8A060', '#F5C6C6', '#C4A882'],
     description: 'Sprytny lisek — możesz wybrać kolory!'
   },
   {
     id: 4, name: 'Top Boho', category: 'koszulki', price: 189,
-    image: 'images/crochet_top.png', badge: 'new', badgeText: 'Nowość',
+    image: 'prototyp/images/crochet_top.png', badge: 'new', badgeText: 'Nowość',
     colors: ['#F5E6D3', '#FFFFFF', '#D4C4B0'],
     description: 'Modny top szydełkowy w stylu boho na lato.'
   },
   {
     id: 5, name: 'Szalik Jesienny', category: 'szaliki', price: 89,
-    image: 'images/crochet_scarf.png', badge: null,
+    image: 'prototyp/images/crochet_scarf.png', badge: null,
     colors: ['#E8C07D', '#C47D3A', '#8B5E3C'],
     description: 'Ciepły szalik w jesiennych barwach.'
   },
   {
     id: 6, name: 'Czapka Różowa', category: 'czapki', price: 69, oldPrice: 89,
-    image: 'images/crochet_hat.png', badge: 'sale', badgeText: '-22%',
+    image: 'prototyp/images/crochet_hat.png', badge: 'sale', badgeText: '-22%',
     colors: ['#F5C6C6', '#FFFFFF', '#E8D8D0'],
     description: 'Przytulna czapka na zimowe spacery.'
   },
   {
     id: 7, name: 'Torba Boho Sage', category: 'torby', price: 159,
-    image: 'images/crochet_bag.png', badge: 'new', badgeText: 'Nowość',
+    image: 'prototyp/images/crochet_bag.png', badge: 'new', badgeText: 'Nowość',
     colors: ['#A0C4B8', '#C4A882', '#E8D8D0'],
     description: 'Elegancka torba w odcieniach szałwii.'
   },
   {
     id: 8, name: 'Torebka Crossbody Rose', category: 'torby', price: 139,
-    image: 'images/crochet_bag2.png', badge: 'custom', badgeText: 'Custom',
+    image: 'prototyp/images/crochet_bag2.png', badge: 'custom', badgeText: 'Custom',
     colors: ['#D4A0A0', '#F0D4D4', '#C4A882'],
     description: 'Modna torebka na ramię z frędzlami.'
   }
